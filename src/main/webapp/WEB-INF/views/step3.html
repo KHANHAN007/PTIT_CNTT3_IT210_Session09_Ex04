@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h3>Xác nhận thông tin</h3>
+
+<p th:text="${seller.fullName}"></p>
+<p th:text="${seller.email}"></p>
+<p th:text="${seller.shopName}"></p>
+<p th:text="${seller.address}"></p>
+
+<form th:action="@{/register/finish}" method="post">
+    <button type="submit">Hoàn tất</button>
+</form>
 </body>
 </html>
